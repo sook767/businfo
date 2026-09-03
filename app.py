@@ -8,7 +8,7 @@ url = st.secrets["supabase"]["url"]
 key = st.secrets["supabase"]["key"]
 supabase: Client = create_client(url, key)
 
-st.subheader("🚍 동원훈련 탑승정보 조회")
+st.subheader("🚍 탑승정보 조회")
 st.divider()
 name = st.text_input("이름", max_chars=4)
 phone = st.text_input("전화번호 뒷자리 (4자리)", max_chars=4)
@@ -69,7 +69,7 @@ if st.button("버스정보 조회하기"):
             
 notice = """
 📢 **공지사항**  
-- 본 서비스는 동원훈련 탑승버스 조회 전용입니다.  
+- 본 서비스는 탑승버스 조회 전용입니다.  
 - 개인정보 보호를 위해 불필요한 정보는 저장하지 않으며, 모든 내용은 익명으로 처리됩니다.
 - 문제가 발생하면 직원에게 문의하세요.  
 """
